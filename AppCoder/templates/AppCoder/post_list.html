@@ -1,0 +1,19 @@
+<title>Lista de Posts</title> 
+<ul>
+    {% for posts in object_list %}
+
+    <li>
+        <p>Titulo : {{posts.title}}</p>
+        
+        <p>
+            <a href="{% url 'blogDetalle' posts.id %}">Ver</a>
+            
+        </p>
+    </li>
+    {% endfor %}
+
+<a href="{% url 'blogFormulario' %}">Nuevo Post</a>
+
+
+
+</ul>
